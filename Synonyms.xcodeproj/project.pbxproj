@@ -152,7 +152,6 @@
 				TargetAttributes = {
 					16D5E5011F262B2D00ED7F0F = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 4365VP3HP5;
 						ProvisioningStyle = Automatic;
 					};
 					16D5E5151F262B2D00ED7F0F = {
@@ -349,7 +348,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4365VP3HP5;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Synonyms/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LonosGames.Synonyms;
@@ -362,7 +361,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4365VP3HP5;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Synonyms/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LonosGames.Synonyms;
