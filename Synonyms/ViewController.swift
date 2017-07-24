@@ -30,11 +30,25 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
-           }
+        setupUI_Start()
+    }
     func setupUI_Start(){
         //Read the Hightscore and Times Played from a txt file
         
+        let path = Bundle.main.path(forResource: "score", ofType: "txt")
+        var content = ""
+        do{
+            content = try String(contentsOfFile: path!)
+        } catch {
+            print(error)
+        }
+        
+        let array = content.components(separatedBy: "#")
+        
+//        if array[0] != "NOSCORE" && array[1] != "NOTPLAYED"{
+            HighscoreNumber.text = array[0]
+            TimesPlayedNumber.text = array[1]
+//        }
     }
 
     
