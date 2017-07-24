@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var TimesPlayedNumber: UILabel!
     
     
-    //changing status bar style t white
+    //changing status bar style to white
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
