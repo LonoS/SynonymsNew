@@ -9,27 +9,29 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //MARK Bottom_Labels
+    @IBOutlet weak var HighscoreLabel: UILabel!
+    @IBOutlet weak var TimesPlayedLabel: UILabel!
+    //MARK Bottom_Numbers
+    @IBOutlet weak var HighscoreNumber: UILabel!
+    @IBOutlet weak var TimesPlayedNumber: UILabel!
+    
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI_Start()
 
-        // Do any additional setup after loading the view.
+           }
+    func setupUI_Start(){
+        //Read the Hightscore and Times Played from a txt file
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+ 
 }
