@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -164,6 +164,13 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hto-eg-3Ha">
+                                <rect key="frame" x="166" y="93" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -174,10 +181,17 @@
                             <constraint firstAttribute="trailing" secondItem="2Mf-Os-abF" secondAttribute="trailing" constant="10" id="kgD-E0-z0F"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btn1" destination="tVQ-vs-j4z" id="yBe-p8-IMv"/>
+                        <outlet property="btn2" destination="22w-bc-YNk" id="GVP-CT-Q9t"/>
+                        <outlet property="btn3" destination="0bD-H9-aSs" id="7w5-BE-g9O"/>
+                        <outlet property="btn4" destination="V8q-Mb-bop" id="ZcV-jh-hQU"/>
+                        <outlet property="frage" destination="Hto-eg-3Ha" id="8iA-aC-5g3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPv-cM-lEX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754.39999999999998" y="71.514242878560722"/>
+            <point key="canvasLocation" x="764" y="37"/>
         </scene>
     </scenes>
     <resources>
