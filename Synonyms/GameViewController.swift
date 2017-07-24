@@ -39,6 +39,7 @@ class GameViewController: UIViewController {
         
         var wiederholung = true
         
+        
         var zufallsZahl: Int
         
         repeat {
