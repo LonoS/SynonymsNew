@@ -49,6 +49,9 @@
                                     <color key="titleColor" red="0.34735742211341858" green="0.3377625048160553" blue="0.33377531170845032" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="O6M-6h-Fea" kind="show" id="6qz-tS-0fI"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="06U-WZ-Kai" userLabel="BottomLables">
                                 <rect key="frame" x="35" y="602" width="304" height="57"/>
