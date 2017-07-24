@@ -11,60 +11,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Game View Controller-->
-        <scene sceneID="LXj-JU-XIV">
-            <objects>
-                <viewController id="6jq-bn-az3" customClass="GameViewController" customModule="Synonyms" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="thn-C1-1eL"/>
-                        <viewControllerLayoutGuide type="bottom" id="way-tO-HFE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="I2W-7j-w84">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Synonyms_Background" translatesAutoresizingMaskIntoConstraints="NO" id="FDP-8e-0g6" userLabel="Background">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xqp-QZ-eyx">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogh-LB-5OJ" userLabel="Button1">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCF-ly-b7y" userLabel="Button2">
-                                        <rect key="frame" x="0.0" y="167" width="375" height="166.5"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZJ-2C-Vnn" userLabel="Button3">
-                                        <rect key="frame" x="0.0" y="333.5" width="375" height="167"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYh-T7-nmj" userLabel="Button4">
-                                        <rect key="frame" x="0.0" y="500.5" width="375" height="166.5"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="way-tO-HFE" firstAttribute="top" secondItem="xqp-QZ-eyx" secondAttribute="bottom" id="4bm-kD-GpY"/>
-                            <constraint firstItem="xqp-QZ-eyx" firstAttribute="top" secondItem="I2W-7j-w84" secondAttribute="top" id="99A-bt-GQX"/>
-                            <constraint firstItem="way-tO-HFE" firstAttribute="top" secondItem="FDP-8e-0g6" secondAttribute="bottom" id="AbE-ia-0NU"/>
-                            <constraint firstItem="xqp-QZ-eyx" firstAttribute="leading" secondItem="I2W-7j-w84" secondAttribute="leading" id="Kpg-3C-Cqr"/>
-                            <constraint firstItem="FDP-8e-0g6" firstAttribute="leading" secondItem="I2W-7j-w84" secondAttribute="leading" id="Nag-Xq-dmX"/>
-                            <constraint firstItem="FDP-8e-0g6" firstAttribute="top" secondItem="I2W-7j-w84" secondAttribute="top" id="oeK-dD-iCS"/>
-                            <constraint firstAttribute="trailing" secondItem="xqp-QZ-eyx" secondAttribute="trailing" id="rbU-eB-PmI"/>
-                            <constraint firstAttribute="trailing" secondItem="FDP-8e-0g6" secondAttribute="trailing" id="weN-45-xBM"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Fz-QK-y86" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="920.79999999999995" y="43.628185907046479"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>

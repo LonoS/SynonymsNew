@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     //MARK Bottom_Labels
     @IBOutlet weak var HighscoreLabel: UILabel!
-    @IBOutlet weak static var TimesPlayedLabel: UILabel!
+    @IBOutlet weak var TimesPlayedLabel: UILabel!
     //MARK Bottom_Numbers
     @IBOutlet weak var HighscoreNumber: UILabel!
     @IBOutlet weak var TimesPlayedNumber: UILabel!
