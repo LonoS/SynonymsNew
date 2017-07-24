@@ -10,8 +10,17 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+    @IBOutlet weak var frage: UILabel!
+    @IBOutlet weak var btn1: UIButton!
+    @IBOutlet weak var btn2: UIButton!
+    @IBOutlet weak var btn3: UIButton!
+    @IBOutlet weak var btn4: UIButton!
+    
+    
+    
     var fragenArray = [String]()
     var indexArray = [Int]()
+    var antwortButton: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,12 +46,24 @@ class GameViewController: UIViewController {
         if indexArray.count != fragenArray.count{
             
         let zeile = fragenArray[zufallsZahl()]
-        let einzeln = zeile.components(separatedBy: "#")
+        var einzeln = zeile.components(separatedBy: "#")
         
+            
+        // lösche absatzmarke
+            
+            einzeln[0] = einzeln[0].replacingOccurrences(of: "\n", with: "")
+            einzeln[5] = einzeln[5].replacingOccurrences(of: "\n", with: "")
+            
+            
         // fill the Button with Data
+            frage.text = einzeln[0]
             
+            btn1.setTitle(einzeln[1], for: .normal)
+            btn2.setTitle(einzeln[2], for: .normal)
+            btn3.setTitle(einzeln[3], for: .normal)
+            btn4.setTitle(einzeln[4], for: .normal)
             
-        
+            antwortButton = Int(einzeln[5])
         }
     }
     
