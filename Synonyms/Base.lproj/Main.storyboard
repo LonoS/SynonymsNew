@@ -53,7 +53,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="06U-WZ-Kai" userLabel="BottomLables">
                                 <rect key="frame" x="35" y="602" width="304" height="57"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PSt-7C-JKN" userLabel="Highscore">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PSt-7C-JKN" userLabel="Highscore">
                                         <rect key="frame" x="0.0" y="0.0" width="137" height="57"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Highscore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6q4-gf-y5k">
@@ -70,27 +70,35 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ByW-og-y7m" userLabel="HighscoreNumbers">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ByW-og-y7m" userLabel="HighscoreNumbers">
                                         <rect key="frame" x="287" y="0.0" width="17" height="57"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="to9-Eb-ZTd" userLabel="Highscore">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="to9-Eb-ZTd" userLabel="Highscore">
                                                 <rect key="frame" x="0.0" y="0.0" width="17" height="34.5"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
                                                 <color key="textColor" red="0.46843316224572573" green="0.46235306095442386" blue="0.45752224147805248" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAq-oc-BvB" userLabel="TimesPlayed">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAq-oc-BvB" userLabel="TimesPlayed">
                                                 <rect key="frame" x="0.0" y="39.5" width="17" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 <color key="textColor" red="0.46843316224572573" green="0.46235306095442386" blue="0.45752224147805248" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="17" id="lxD-Cz-j6j"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="06U-WZ-Kai" secondAttribute="height" multiplier="16:3" id="Asy-dw-rp9"/>
+                                    <constraint firstAttribute="bottom" secondItem="ByW-og-y7m" secondAttribute="bottom" id="JEq-ug-AIQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="ByW-og-y7m" secondAttribute="trailing" id="Z2e-BP-yhw"/>
                                     <constraint firstAttribute="trailing" secondItem="ByW-og-y7m" secondAttribute="trailing" id="fi3-no-YON"/>
+                                    <constraint firstItem="ByW-og-y7m" firstAttribute="top" secondItem="06U-WZ-Kai" secondAttribute="top" id="oBc-Lt-Avm"/>
+                                    <constraint firstAttribute="bottom" secondItem="PSt-7C-JKN" secondAttribute="bottom" id="vUn-4d-EvK"/>
+                                    <constraint firstItem="PSt-7C-JKN" firstAttribute="leading" secondItem="06U-WZ-Kai" secondAttribute="leading" id="vwQ-kS-Iiw"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -222,6 +230,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="WinView" destination="q5f-gI-Q2k" id="yID-XH-DYx"/>
                         <outlet property="btn1" destination="tVQ-vs-j4z" id="yBe-p8-IMv"/>
                         <outlet property="btn2" destination="22w-bc-YNk" id="GVP-CT-Q9t"/>
                         <outlet property="btn3" destination="0bD-H9-aSs" id="7w5-BE-g9O"/>
@@ -235,23 +244,31 @@
                     <rect key="frame" x="0.0" y="0.0" width="240" height="300"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpK-aI-Qsf" userLabel="Richtig Label">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Richtig!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpK-aI-Qsf" userLabel="Richtig Label">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="105"/>
                             <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="40"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hib-dY-te3" userLabel="WInButton">
-                            <rect key="frame" x="69" y="88" width="102" height="100"/>
+                            <rect key="frame" x="70" y="103" width="100" height="100"/>
                             <state key="normal" title="Button" image="Synonyms_win_1.1"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqz-v5-nWg" userLabel="Fortsetzen ">
+                            <rect key="frame" x="0.0" y="209" width="240" height="91"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="40"/>
+                            <state key="normal" title="Weiter">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
                         </button>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="Hib-dY-te3" firstAttribute="leading" secondItem="q5f-gI-Q2k" secondAttribute="leading" constant="69" id="Ffg-8V-jod"/>
+                        <constraint firstItem="Hib-dY-te3" firstAttribute="leading" secondItem="q5f-gI-Q2k" secondAttribute="leading" constant="70" id="Ffg-8V-jod"/>
                         <constraint firstAttribute="trailing" secondItem="MpK-aI-Qsf" secondAttribute="trailing" id="iOT-aK-xE0"/>
-                        <constraint firstAttribute="bottom" secondItem="Hib-dY-te3" secondAttribute="bottom" constant="112" id="psB-Zm-x8L"/>
+                        <constraint firstAttribute="bottom" secondItem="Hib-dY-te3" secondAttribute="bottom" constant="97" id="psB-Zm-x8L"/>
                         <constraint firstItem="MpK-aI-Qsf" firstAttribute="leading" secondItem="q5f-gI-Q2k" secondAttribute="leading" id="wqn-y3-yn1"/>
-                        <constraint firstAttribute="trailing" secondItem="Hib-dY-te3" secondAttribute="trailing" constant="69" id="zV6-j2-HnL"/>
+                        <constraint firstAttribute="trailing" secondItem="Hib-dY-te3" secondAttribute="trailing" constant="70" id="zV6-j2-HnL"/>
                     </constraints>
                 </view>
             </objects>
