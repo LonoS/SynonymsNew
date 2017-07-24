@@ -11,11 +11,11 @@ import UIKit
 class ViewController: UIViewController {
     
     //MARK Bottom_Labels
-    @IBOutlet weak var HighscoreLabel: UILabel!
-    @IBOutlet weak var TimesPlayedLabel: UILabel!
+    @IBOutlet weak static var HighscoreLabel: UILabel!
+    @IBOutlet weak static var TimesPlayedLabel: UILabel!
     //MARK Bottom_Numbers
-    @IBOutlet weak var HighscoreNumber: UILabel!
-    @IBOutlet weak var TimesPlayedNumber: UILabel!
+    @IBOutlet weak static var HighscoreNumber: UILabel!
+    @IBOutlet weak static var TimesPlayedNumber: UILabel!
     
     
     
