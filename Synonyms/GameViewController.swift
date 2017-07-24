@@ -9,6 +9,7 @@
 import UIKit
 
 class GameViewController: UIViewController {
+    //MARK: View
     @IBOutlet var RichtigFalschView: UIView!
     //MARK: Synonym
     @IBOutlet weak var frage: UILabel!
@@ -123,6 +124,7 @@ class GameViewController: UIViewController {
             view.addSubview(RichtigFalschView)
             RichtigFalschView.center = view.center
         }
+
     }
     
     func getZufallszahl() -> Int{
