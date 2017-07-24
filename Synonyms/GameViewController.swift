@@ -18,13 +18,18 @@ class GameViewController: UIViewController {
     @IBOutlet weak var btn4: UIButton!
     //MARK: Score
     @IBOutlet weak var score: UILabel!
-    
-    
+    // status bar style white
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
+
     
     
     var fragenArray = [String]()
     var indexArray = [Int]()
     var antwortButton: Int!
+    
     
     // Button actions
     @IBAction func btn1Pressed(_ sender: UIButton) {
@@ -48,6 +53,10 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         setup()
     }
+    
+    
+    
+    
 
     // called at first to load content of the file
     func setup() {
@@ -56,10 +65,14 @@ class GameViewController: UIViewController {
         do{
             content = try String(contentsOfFile: path!)
         } catch {
+            
+            print("fehler !!!!!!!!!!!")
             print(error)
         }
         
+        
         fragenArray = content.components(separatedBy: "##")
+        
         
         reloadData()
     }
@@ -90,26 +103,6 @@ class GameViewController: UIViewController {
     }
     
     func zufallsZahl() -> Int{
-        
-        var wiederholung = true
-        
-        
-        var zufallsZahl: Int
-        
-        repeat {
-            zufallsZahl = Int(arc4random_uniform(UInt32(fragenArray.count-1)))
-            for index in 0..<indexArray.count {
-                if indexArray[index] == zufallsZahl {
-                    wiederholung = true
-                    break
-                } else {
-                    wiederholung = false
-                }
-            }
-        } while wiederholung == true
-        
-        indexArray.append(zufallsZahl)
-        
-        return zufallsZahl
+       return 0
     }
 }
