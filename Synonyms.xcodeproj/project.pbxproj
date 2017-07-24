@@ -13,6 +13,7 @@
 		16D5E50D1F262B2D00ED7F0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16D5E50C1F262B2D00ED7F0F /* Assets.xcassets */; };
 		16D5E5101F262B2D00ED7F0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16D5E50E1F262B2D00ED7F0F /* LaunchScreen.storyboard */; };
 		16D5E51B1F262B2D00ED7F0F /* SynonymsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D5E51A1F262B2D00ED7F0F /* SynonymsTests.swift */; };
+		98C7B5791F262F55002924EC /* text.txt in Resources */ = {isa = PBXBuildFile; fileRef = 98C7B5781F262F55002924EC /* text.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		16D5E5161F262B2D00ED7F0F /* SynonymsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SynonymsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16D5E51A1F262B2D00ED7F0F /* SynonymsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynonymsTests.swift; sourceTree = "<group>"; };
 		16D5E51C1F262B2D00ED7F0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98C7B5781F262F55002924EC /* text.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				16D5E5051F262B2D00ED7F0F /* AppDelegate.swift */,
 				16D5E5071F262B2D00ED7F0F /* ViewController.swift */,
+				98C7B5781F262F55002924EC /* text.txt */,
 				16D5E5091F262B2D00ED7F0F /* Main.storyboard */,
 				16D5E50C1F262B2D00ED7F0F /* Assets.xcassets */,
 				16D5E50E1F262B2D00ED7F0F /* LaunchScreen.storyboard */,
@@ -184,6 +187,7 @@
 				16D5E5101F262B2D00ED7F0F /* LaunchScreen.storyboard in Resources */,
 				16D5E50D1F262B2D00ED7F0F /* Assets.xcassets in Resources */,
 				16D5E50B1F262B2D00ED7F0F /* Main.storyboard in Resources */,
+				98C7B5791F262F55002924EC /* text.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +416,7 @@
 				16D5E5211F262B2D00ED7F0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16D5E5221F262B2D00ED7F0F /* Build configuration list for PBXNativeTarget "SynonymsTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +425,7 @@
 				16D5E5241F262B2D00ED7F0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
