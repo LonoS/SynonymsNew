@@ -10,6 +10,8 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+    
+    
     @IBOutlet weak var frage: UILabel!
     @IBOutlet weak var btn1: UIButton!
     @IBOutlet weak var btn2: UIButton!
