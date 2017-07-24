@@ -17,6 +17,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var HighscoreNumber: UILabel!
     @IBOutlet weak var TimesPlayedNumber: UILabel!
     
+    @IBAction func startBtn(_ sender: UIButton) {
+        performSegue(withIdentifier: "1", sender: sender)
+    }
     
     //changing status bar style to white
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -26,7 +29,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI_Start()
+
 
            }
     func setupUI_Start(){

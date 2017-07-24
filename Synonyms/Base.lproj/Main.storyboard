@@ -50,7 +50,8 @@
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="O6M-6h-Fea" kind="show" id="3Gi-L1-Rcp"/>
+                                    <action selector="startBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UiY-2t-Psm"/>
+                                    <segue destination="O6M-6h-Fea" kind="show" identifier="1" id="oYD-Qp-Ncc"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="06U-WZ-Kai" userLabel="BottomLables">
@@ -164,7 +165,7 @@
                                             <color key="titleColor" red="0.62213057279586792" green="0.59469294548034668" blue="0.59690678119659424" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btn1Pressed:" destination="O6M-6h-Fea" eventType="touchUpInside" id="hT2-qB-JK0"/>
+                                            <action selector="btn1Pressed:" destination="O6M-6h-Fea" eventType="touchUpInside" id="h5P-50-QeR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22w-bc-YNk">
@@ -174,7 +175,7 @@
                                             <color key="titleColor" red="0.62213057279586792" green="0.59469294548034668" blue="0.59690678119659424" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btn2Pressed:" destination="O6M-6h-Fea" eventType="touchUpInside" id="gG8-7x-c1j"/>
+                                            <action selector="btn2Pressed:" destination="O6M-6h-Fea" eventType="touchUpInside" id="y3v-l0-jhb"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bD-H9-aSs">
@@ -184,7 +185,7 @@
                                             <color key="titleColor" red="0.62213057279586792" green="0.59469294548034668" blue="0.59690678119659424" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btn3Pressed:" destination="O6M-6h-Fea" eventType="touchUpInside" id="c8X-m6-YtW"/>
+                                            <action selector="btn3Pressed:" destination="O6M-6h-Fea" eventType="touchUpInside" id="wyJ-Jx-Pvr"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8q-Mb-bop">
@@ -194,7 +195,7 @@
                                             <color key="titleColor" red="0.62213057279586792" green="0.59469294548034668" blue="0.59690678119659424" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btn4Pressed:" destination="O6M-6h-Fea" eventType="touchUpInside" id="ydf-Kw-OuG"/>
+                                            <action selector="btn4Pressed:" destination="O6M-6h-Fea" eventType="touchUpInside" id="PeD-ex-zp1"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -233,13 +234,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="WinView" destination="q5f-gI-Q2k" id="yID-XH-DYx"/>
-                        <outlet property="btn1" destination="tVQ-vs-j4z" id="yBe-p8-IMv"/>
-                        <outlet property="btn2" destination="22w-bc-YNk" id="GVP-CT-Q9t"/>
-                        <outlet property="btn3" destination="0bD-H9-aSs" id="7w5-BE-g9O"/>
-                        <outlet property="btn4" destination="V8q-Mb-bop" id="ZcV-jh-hQU"/>
-                        <outlet property="frage" destination="Hto-eg-3Ha" id="8iA-aC-5g3"/>
-                        <outlet property="score" destination="igf-Cw-N09" id="SkX-5l-C9X"/>
+                        <outlet property="RichtigFalschView" destination="q5f-gI-Q2k" id="olf-lP-ny8"/>
+                        <outlet property="btn1" destination="tVQ-vs-j4z" id="bcA-4H-4ya"/>
+                        <outlet property="btn2" destination="22w-bc-YNk" id="rAf-vE-dvn"/>
+                        <outlet property="btn3" destination="0bD-H9-aSs" id="awR-9p-WX2"/>
+                        <outlet property="btn4" destination="V8q-Mb-bop" id="DlG-pq-cbW"/>
+                        <outlet property="frage" destination="Hto-eg-3Ha" id="7bc-Sb-BSh"/>
+                        <outlet property="score" destination="igf-Cw-N09" id="fox-iV-dy0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPv-cM-lEX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -275,7 +276,7 @@
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="764" y="36.431784107946029"/>
+            <point key="canvasLocation" x="1018" y="64"/>
         </scene>
     </scenes>
     <resources>

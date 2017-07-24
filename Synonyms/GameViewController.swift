@@ -9,6 +9,7 @@
 import UIKit
 
 class GameViewController: UIViewController {
+    @IBOutlet var RichtigFalschView: UIView!
     //MARK: Synonym
     @IBOutlet weak var frage: UILabel!
     //MARK: Antworten
@@ -18,6 +19,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var btn4: UIButton!
     //MARK: Score
     @IBOutlet weak var score: UILabel!
+    
+    
     // status bar style white
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -80,7 +83,7 @@ class GameViewController: UIViewController {
     func reloadData() {
         if indexArray.count != fragenArray.count{
             
-        let zeile = fragenArray[zufallsZahl()]
+        let zeile = fragenArray[getZufallszahl()]
         var einzeln = zeile.components(separatedBy: "#")
         
             
@@ -102,7 +105,18 @@ class GameViewController: UIViewController {
         }
     }
     
-    func zufallsZahl() -> Int{
-       return 0
+    func getZufallszahl() -> Int{
+        var wiederholung = false
+        var zufallszahl: Int
+        
+        repeat{
+            zufallszahl = Int(arc4random_uniform(UInt32(fragenArray.count-1)))
+            if indexArray.contains(zufallszahl) {
+                wiederholung = true
+            }
+        } while wiederholung == true
+        
+        indexArray.append(zufallszahl)
+        return zufallszahl
     }
 }
