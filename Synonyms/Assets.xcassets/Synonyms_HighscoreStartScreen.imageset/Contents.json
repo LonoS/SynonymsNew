@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Synonyms_HighscoreStartScreen.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Synonyms_HighscoreStartScreen.png",
       "scale" : "2x"
     },
     {
