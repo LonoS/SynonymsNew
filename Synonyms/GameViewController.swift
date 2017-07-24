@@ -21,6 +21,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var score: UILabel!
     
     
+    
+    
     // status bar style white
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -68,6 +70,8 @@ class GameViewController: UIViewController {
     func setup() {
         let path = Bundle.main.path(forResource: "text", ofType: "txt")
         var content = ""
+        score.text = "0"
+        
         do{
             content = try String(contentsOfFile: path!)
         } catch {
