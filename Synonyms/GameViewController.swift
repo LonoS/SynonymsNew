@@ -29,10 +29,21 @@ class GameViewController: UIViewController {
         }
         
         fragenArray = content.components(separatedBy: "##")
+        
+        reloadData()
     }
 
     func reloadData() {
+        if indexArray.count != fragenArray.count{
+            
+        let zeile = fragenArray[zufallsZahl()]
+        let einzeln = zeile.components(separatedBy: "#")
         
+        // fill the Button with Data
+            
+            
+        
+        }
     }
     
     func zufallsZahl() -> Int{
@@ -46,7 +57,10 @@ class GameViewController: UIViewController {
             zufallsZahl = Int(arc4random_uniform(UInt32(fragenArray.count-1)))
             for index in 0..<indexArray.count {
                 if indexArray[index] == zufallsZahl {
-                    
+                    wiederholung = true
+                    break
+                } else {
+                    wiederholung = false
                 }
             }
         } while wiederholung == true
