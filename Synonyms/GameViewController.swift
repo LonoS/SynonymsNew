@@ -9,7 +9,10 @@
 import UIKit
 
 class GameViewController: UIViewController {
-    //MARK: View
+    
+    
+    @IBOutlet var endcardView: UIView!
+    @IBOutlet weak var richtigFlaschImage: UIImageView!
     @IBOutlet var RichtigFalschView: UIView!
     //MARK: Synonym
     @IBOutlet weak var frage: UILabel!
@@ -35,7 +38,7 @@ class GameViewController: UIViewController {
     var fragenArray = [String]()
     var indexArray = [Int]()
     var antwortButton: Int!
-    
+    var scoreInt = 0
     
     // Button actions
     @IBAction func btn1Pressed(_ sender: UIButton) {
@@ -128,6 +131,8 @@ class GameViewController: UIViewController {
         RichtigFalschView.center = view.center
         if buttonNummer == antwortButton {
             richtigFlaschImage.image = #imageLiteral(resourceName: "Synonyms_win_1.1")
+            scoreInt = scoreInt + 1
+            score.text = "\(scoreInt)"
         } else {
             richtigFlaschImage.image = #imageLiteral(resourceName: "Synonyms_loose_1.0")
         }
@@ -148,6 +153,8 @@ class GameViewController: UIViewController {
             zufallszahl = Int(arc4random_uniform(UInt32(fragenArray.count)))
             if indexArray.contains(zufallszahl) {
                 wiederholung = true
+            } else {
+                wiederholung = false
             }
         } while wiederholung == true
         
