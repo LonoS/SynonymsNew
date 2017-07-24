@@ -209,7 +209,6 @@
                         <constraints>
                             <constraint firstItem="2Mf-Os-abF" firstAttribute="leading" secondItem="5hA-PU-g7D" secondAttribute="leading" constant="10" id="2qG-0l-O5C"/>
                             <constraint firstItem="2Mf-Os-abF" firstAttribute="top" secondItem="igf-Cw-N09" secondAttribute="bottom" constant="116" id="7rk-eB-Ssl"/>
-                            <constraint firstItem="rXg-xI-XPc" firstAttribute="top" secondItem="2Mf-Os-abF" secondAttribute="bottom" id="Bpj-Dg-WRO"/>
                             <constraint firstItem="igf-Cw-N09" firstAttribute="top" secondItem="eeP-v9-t4k" secondAttribute="bottom" id="Lbz-7t-UuF"/>
                             <constraint firstItem="igf-Cw-N09" firstAttribute="leading" secondItem="5hA-PU-g7D" secondAttribute="leading" constant="10" id="MAJ-p1-hHo"/>
                             <constraint firstItem="rXg-xI-XPc" firstAttribute="top" secondItem="2Mf-Os-abF" secondAttribute="bottom" constant="10" id="WzI-66-C3J"/>
@@ -232,10 +231,28 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPv-cM-lEX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="q5f-gI-Q2k">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                <view contentMode="scaleToFill" id="q5f-gI-Q2k" userLabel="WinView">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="300"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpK-aI-Qsf" userLabel="Richtig Label">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="105"/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="40"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hib-dY-te3" userLabel="WInButton">
+                            <rect key="frame" x="69" y="88" width="102" height="100"/>
+                            <state key="normal" title="Button" image="Synonyms_win_1.1"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Hib-dY-te3" firstAttribute="leading" secondItem="q5f-gI-Q2k" secondAttribute="leading" constant="69" id="Ffg-8V-jod"/>
+                        <constraint firstAttribute="trailing" secondItem="MpK-aI-Qsf" secondAttribute="trailing" id="iOT-aK-xE0"/>
+                        <constraint firstAttribute="bottom" secondItem="Hib-dY-te3" secondAttribute="bottom" constant="112" id="psB-Zm-x8L"/>
+                        <constraint firstItem="MpK-aI-Qsf" firstAttribute="leading" secondItem="q5f-gI-Q2k" secondAttribute="leading" id="wqn-y3-yn1"/>
+                        <constraint firstAttribute="trailing" secondItem="Hib-dY-te3" secondAttribute="trailing" constant="69" id="zV6-j2-HnL"/>
+                    </constraints>
                 </view>
             </objects>
             <point key="canvasLocation" x="764" y="36.431784107946029"/>
@@ -245,5 +262,6 @@
         <image name="Button" width="904" height="254"/>
         <image name="Synonyms_Background" width="1242" height="2204"/>
         <image name="Synonyms_HighscoreStartScreen" width="1242" height="2204"/>
+        <image name="Synonyms_win_1.1" width="100" height="100"/>
     </resources>
 </document>
