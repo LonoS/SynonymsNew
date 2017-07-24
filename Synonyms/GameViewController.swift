@@ -36,16 +36,19 @@ class GameViewController: UIViewController {
     
     // Button actions
     @IBAction func btn1Pressed(_ sender: UIButton) {
-    
+        checkIf(1)
     }
     
     @IBAction func btn2Pressed(_ sender: UIButton) {
+        checkIf(2)
     }
     
     @IBAction func btn3Pressed(_ sender: UIButton) {
+        checkIf(3)
     }
     
     @IBAction func btn4Pressed(_ sender: UIButton) {
+        checkIf(4)
     }
     
     
@@ -107,6 +110,14 @@ class GameViewController: UIViewController {
             btn4.setTitle(einzeln[4], for: .normal)
             
             antwortButton = Int(einzeln[5])
+        }
+    }
+    
+    
+    func checkIf(_ buttonNummer: Int) {
+        if buttonNummer == antwortButton {
+            view.addSubview(RichtigFalschView)
+            RichtigFalschView.center = view.center
         }
     }
     
