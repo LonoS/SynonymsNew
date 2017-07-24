@@ -20,7 +20,13 @@ class GameViewController: UIViewController {
     @IBOutlet weak var score: UILabel!
     //MARK: WinView
     @IBOutlet var WinView: UIView!
+    @IBOutlet weak var fortsetzenBtn: UIButton!
+    
     //MARK: LooseView
+    @IBOutlet var LooseView: UIView!
+    @IBOutlet weak var retryBtn: UIButton!
+    
+    
     
     
     
