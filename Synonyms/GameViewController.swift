@@ -11,7 +11,6 @@ import UIKit
 class GameViewController: UIViewController {
 
     var fragenArray = [String]()
-    var zufallsZahl: Int!
     var indexArray = [Int]()
     
     override func viewDidLoad() {
@@ -36,15 +35,23 @@ class GameViewController: UIViewController {
         
     }
     
-    func zufallsZahl() {
+    func zufallsZahl() -> Int{
         
         var wiederholung = true
         
+        var zufallsZahl: Int
+        
         repeat {
-        zufallsZahl = Int(arc4random_uniform(Int32(fragenArray.count)))
-        for index in 0..<indexArray.count {
-            
-        }
-        }while wiederholung == false
+            zufallsZahl = Int(arc4random_uniform(UInt32(fragenArray.count-1)))
+            for index in 0..<indexArray.count {
+                if indexArray[index] == zufallsZahl {
+                    
+                }
+            }
+        } while wiederholung == true
+        
+        indexArray.append(zufallsZahl)
+        
+        return zufallsZahl
     }
 }
