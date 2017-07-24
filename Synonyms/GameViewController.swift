@@ -9,10 +9,7 @@
 import UIKit
 
 class GameViewController: UIViewController {
-    
-    
-    @IBOutlet var endcardView: UIView!
-    @IBOutlet weak var richtigFlaschImage: UIImageView!
+    //MARK: View
     @IBOutlet var RichtigFalschView: UIView!
     //MARK: Synonym
     @IBOutlet weak var frage: UILabel!
@@ -134,6 +131,7 @@ class GameViewController: UIViewController {
         } else {
             richtigFlaschImage.image = #imageLiteral(resourceName: "Synonyms_loose_1.0")
         }
+
     }
     
     @IBAction func nextButton(_ sender: UIButton) {

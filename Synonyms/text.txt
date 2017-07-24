@@ -1,2 +1,11 @@
-Lampe#Ampel#Kerze#Beleuchtungskörper#Luster#3##
-Pferd#Schimmel#Fümmel#Schindmähre#Ross#4
+Rotunde#Schloss#Rotkelch#Birke#Hund#1##
+Schlitzohr#Piercing#Ohrringe#Betrüger#Räuber#3##
+Schlimmenase#Oase#Erfrischungsgetränk#Hase#Schlingel#2##
+Rechenknecht#Ritter#Computer#Knecht#Taschenrechner#2##
+Aeroplan#Computerspiel#Plane#Flugzeug#Luft-Gemisch#3##
+Gaudium#Leckerbissen#Stadion#Essen#Augenweide#1##
+hadersüchtig#aggresiv#Klamottensucht#Fernsehsucht#Hundeeigenschaft#1##
+Virtuose#Flüssigkeit#Süchtiger#Ass(Karten)#Könner#4##
+Inkriminierung#Inhaftierung#Kriminelle#Anschuldigung#Neustart#3##
+Varieteekünstler#Akrobat#Entfesslungskünstler#Zauberer#Maler#1##
+Gusto#Eßlust#Griechisches Restaurant#Sparschwein#Büroklammer#1
