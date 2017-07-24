@@ -9,12 +9,16 @@
 import UIKit
 
 class GameViewController: UIViewController {
-
+    //MARK: Synonym
     @IBOutlet weak var frage: UILabel!
+    //MARK: Antworten
     @IBOutlet weak var btn1: UIButton!
     @IBOutlet weak var btn2: UIButton!
     @IBOutlet weak var btn3: UIButton!
     @IBOutlet weak var btn4: UIButton!
+    //MARK: Score
+    @IBOutlet weak var score: UILabel!
+    
     
     
     
