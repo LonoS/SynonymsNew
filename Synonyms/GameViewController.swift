@@ -29,12 +29,21 @@ class GameViewController: UIViewController {
         }
         
         fragenArray = content.components(separatedBy: "##")
+        
+        reloadData()
     }
 
     func reloadData() {
+        if indexArray.count != fragenArray.count{
+            
         let zeile = fragenArray[zufallsZahl()]
         let einzeln = zeile.components(separatedBy: "#")
         
+        // fill the Button with Data
+            
+            
+        
+        }
     }
     
     func zufallsZahl() -> Int{
