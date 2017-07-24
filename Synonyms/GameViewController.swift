@@ -121,6 +121,7 @@ class GameViewController: UIViewController {
         } else {
             view.addSubview(endcardView)
             endcardView.center = view.center
+            indexArray.removeAll()
         }
     }
     
