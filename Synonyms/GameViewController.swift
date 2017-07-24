@@ -79,6 +79,11 @@ class GameViewController: UIViewController {
         
         reloadData()
     }
+    
+    
+    
+    
+    
 
     func reloadData() {
         if indexArray.count != fragenArray.count{

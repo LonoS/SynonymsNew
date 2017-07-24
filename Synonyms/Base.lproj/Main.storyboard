@@ -245,34 +245,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPv-cM-lEX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="q5f-gI-Q2k" userLabel="WinView">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="300"/>
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Richtig!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpK-aI-Qsf" userLabel="Richtig Label">
-                            <rect key="frame" x="0.0" y="0.0" width="240" height="105"/>
-                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="40"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hib-dY-te3" userLabel="WInButton">
-                            <rect key="frame" x="70" y="103" width="100" height="100"/>
-                            <state key="normal" title="Button" image="Synonyms_win_1.1"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqz-v5-nWg" userLabel="Fortsetzen ">
+                            <rect key="frame" x="70" y="136" width="93" height="88"/>
+                            <state key="normal" image="Synonyms_Weiter_Button">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqz-v5-nWg" userLabel="Fortsetzen ">
-                            <rect key="frame" x="0.0" y="209" width="240" height="91"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="40"/>
-                            <state key="normal" title="Weiter">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Synonyms_win_1.1" translatesAutoresizingMaskIntoConstraints="NO" id="HGc-dw-sFQ">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="wqz-v5-nWg" secondAttribute="bottom" constant="16" id="9aj-gy-hnH"/>
+                        <constraint firstAttribute="trailing" secondItem="wqz-v5-nWg" secondAttribute="trailing" constant="77" id="Do6-5U-jCg"/>
+                        <constraint firstItem="wqz-v5-nWg" firstAttribute="top" secondItem="q5f-gI-Q2k" secondAttribute="top" constant="136" id="MPY-VM-llJ"/>
+                        <constraint firstItem="wqz-v5-nWg" firstAttribute="top" secondItem="HGc-dw-sFQ" secondAttribute="bottom" constant="8" id="SS8-c6-lzt"/>
+                        <constraint firstAttribute="trailing" secondItem="HGc-dw-sFQ" secondAttribute="trailing" id="dRX-ag-5XO"/>
+                        <constraint firstItem="HGc-dw-sFQ" firstAttribute="top" secondItem="q5f-gI-Q2k" secondAttribute="top" id="hwh-C0-ndM"/>
+                        <constraint firstItem="HGc-dw-sFQ" firstAttribute="leading" secondItem="q5f-gI-Q2k" secondAttribute="leading" id="pTV-KS-YaK"/>
+                        <constraint firstItem="wqz-v5-nWg" firstAttribute="leading" secondItem="q5f-gI-Q2k" secondAttribute="leading" constant="70" id="z2g-Hu-F1S"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" id="CYQ-7f-GYV" userLabel="LooseView">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Synonyms_loose_1.0" translatesAutoresizingMaskIntoConstraints="NO" id="EY3-8l-qnq">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleAspectFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJy-Ou-rRM" userLabel="retry">
+                            <rect key="frame" x="75" y="136" width="89" height="84"/>
+                            <state key="normal" image="Synonyms_retry_1.1">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="Hib-dY-te3" firstAttribute="leading" secondItem="q5f-gI-Q2k" secondAttribute="leading" constant="70" id="Ffg-8V-jod"/>
-                        <constraint firstAttribute="trailing" secondItem="MpK-aI-Qsf" secondAttribute="trailing" id="iOT-aK-xE0"/>
-                        <constraint firstAttribute="bottom" secondItem="Hib-dY-te3" secondAttribute="bottom" constant="97" id="psB-Zm-x8L"/>
-                        <constraint firstItem="MpK-aI-Qsf" firstAttribute="leading" secondItem="q5f-gI-Q2k" secondAttribute="leading" id="wqn-y3-yn1"/>
-                        <constraint firstAttribute="trailing" secondItem="Hib-dY-te3" secondAttribute="trailing" constant="70" id="zV6-j2-HnL"/>
+                        <constraint firstAttribute="bottom" secondItem="sJy-Ou-rRM" secondAttribute="bottom" constant="20" id="0sS-8k-Lgp"/>
+                        <constraint firstAttribute="trailing" secondItem="EY3-8l-qnq" secondAttribute="trailing" id="a25-3A-HbJ"/>
+                        <constraint firstItem="sJy-Ou-rRM" firstAttribute="top" secondItem="EY3-8l-qnq" secondAttribute="bottom" constant="8" id="fsX-k7-Uch"/>
+                        <constraint firstItem="EY3-8l-qnq" firstAttribute="top" secondItem="CYQ-7f-GYV" secondAttribute="top" id="h6M-zM-S6J"/>
+                        <constraint firstItem="sJy-Ou-rRM" firstAttribute="leading" secondItem="CYQ-7f-GYV" secondAttribute="leading" constant="75" id="lLd-NR-x8h"/>
+                        <constraint firstItem="EY3-8l-qnq" firstAttribute="leading" secondItem="CYQ-7f-GYV" secondAttribute="leading" id="nKY-of-Hwm"/>
+                        <constraint firstAttribute="trailing" secondItem="sJy-Ou-rRM" secondAttribute="trailing" constant="76" id="tAP-Vp-CS1"/>
                     </constraints>
                 </view>
             </objects>
@@ -283,6 +302,9 @@
         <image name="Button" width="904" height="254"/>
         <image name="Synonyms_Background" width="1242" height="2204"/>
         <image name="Synonyms_HighscoreStartScreen" width="1242" height="2204"/>
+        <image name="Synonyms_Weiter_Button" width="200" height="200"/>
+        <image name="Synonyms_loose_1.0" width="100" height="100"/>
+        <image name="Synonyms_retry_1.1" width="200" height="200"/>
         <image name="Synonyms_win_1.1" width="100" height="100"/>
     </resources>
 </document>
