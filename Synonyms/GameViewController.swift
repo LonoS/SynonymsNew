@@ -22,6 +22,24 @@ class GameViewController: UIViewController {
     var indexArray = [Int]()
     var antwortButton: Int!
     
+    // Button actions
+    @IBAction func btn1Pressed(_ sender: UIButton) {
+    
+    }
+    
+    @IBAction func btn2Pressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func btn3Pressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func btn4Pressed(_ sender: UIButton) {
+    }
+    
+    
+    //Button actions END
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
