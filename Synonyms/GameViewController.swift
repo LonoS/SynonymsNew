@@ -32,6 +32,9 @@ class GameViewController: UIViewController {
     }
 
     func reloadData() {
+        let zeile = fragenArray[zufallsZahl]
+        
+        let einzeln = zeile.
         
     }
     
