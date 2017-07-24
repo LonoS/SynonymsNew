@@ -32,9 +32,8 @@ class GameViewController: UIViewController {
     }
 
     func reloadData() {
-        let zeile = fragenArray[zufallsZahl]
-        
-        let einzeln = zeile.
+        let zeile = fragenArray[zufallsZahl()]
+        let einzeln = zeile.components(separatedBy: "#")
         
     }
     
@@ -48,7 +47,8 @@ class GameViewController: UIViewController {
             zufallsZahl = Int(arc4random_uniform(UInt32(fragenArray.count-1)))
             for index in 0..<indexArray.count {
                 if indexArray[index] == zufallsZahl {
-                    continue
+                    wiederholung = true
+                    break
                 } else {
                     wiederholung = false
                 }
