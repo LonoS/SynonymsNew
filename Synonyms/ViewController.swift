@@ -43,6 +43,20 @@ class ViewController: UIViewController {
       
         TimesPlayedNumber.text = String(timesPlayed)
         
+        let path = Bundle.main.path(forResource: "score", ofType: "txt")
+        var content = ""
+        do{
+            content = try String(contentsOfFile: path!)
+        } catch {
+            print(error)
+        }
+        
+        let array = content.components(separatedBy: "#")
+        
+//        if array[0] != "NOSCORE" && array[1] != "NOTPLAYED"{
+            HighscoreNumber.text = array[0]
+            TimesPlayedNumber.text = array[1]
+//        }
     }
     
     func getHighscore(){
