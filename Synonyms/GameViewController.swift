@@ -133,8 +133,10 @@ class GameViewController: UIViewController {
             richtigFlaschImage.image = #imageLiteral(resourceName: "Synonyms_win_1.1")
             scoreInt = scoreInt + 1
             score.text = "\(scoreInt)"
+            checkIfHighscore(playedScore: scoreInt)
         } else {
             richtigFlaschImage.image = #imageLiteral(resourceName: "Synonyms_loose_1.0")
+            
         }
 
     }
@@ -161,4 +163,59 @@ class GameViewController: UIViewController {
         indexArray.append(zufallszahl)
         return zufallszahl
     }
+    
+    
+    func writeToFile(text:String){
+        let file = "highscore.txt" //this is the file. we will write to and read from it
+        
+        
+        
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            
+            let path = dir.appendingPathComponent(file)
+            
+            //writing
+            do {
+                try text.write(to: path, atomically: false, encoding: String.Encoding.utf8)
+            }
+            catch {/* error handling here */}
+            
+          
+        }
+    }
+    
+    func readFromFile() -> String{
+        let file = "highscore.txt" //this is the file. we will write to and read from it
+        
+        var text2 = ""
+        
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            
+            let path = dir.appendingPathComponent(file)
+            
+            //reading
+            do {
+                text2 = try String(contentsOf: path, encoding: String.Encoding.utf8)
+                
+            }
+            catch {/* error handling here */}
+            
+               }
+        return text2
+            }
+    
+    
+        func checkIfHighscore(playedScore: Int){
+            let highscore = Int(readFromFile())
+            
+            if(playedScore > highscore!)
+                {
+            writeToFile(text: String(playedScore))
+                }
+        
+        
+    }
+
+
+
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -208,7 +208,7 @@
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="3" height="3"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Synonym" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hto-eg-3Ha">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Synonym" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hto-eg-3Ha">
                                 <rect key="frame" x="0.0" y="92" width="375" height="120"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="50"/>
                                 <color key="textColor" red="0.62213057279586792" green="0.59469294548034668" blue="0.59690678119659424" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -268,15 +268,26 @@
                     <rect key="frame" x="0.0" y="0.0" width="240" height="236"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="endcard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exe-I4-SUa">
-                            <rect key="frame" x="89" y="108" width="63" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Glückwunsch!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exe-I4-SUa">
+                            <rect key="frame" x="65" y="99" width="111" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Du hast unsere App geschlagen!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pjd-Kk-PXt">
+                            <rect key="frame" x="0.0" y="128" width="240" height="55"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Pjd-Kk-PXt" secondAttribute="trailing" id="70n-2z-6vZ"/>
+                        <constraint firstItem="Pjd-Kk-PXt" firstAttribute="top" secondItem="exe-I4-SUa" secondAttribute="bottom" constant="8" id="7zz-Dg-2z9"/>
+                        <constraint firstItem="Pjd-Kk-PXt" firstAttribute="leading" secondItem="Evi-pJ-IzW" secondAttribute="leading" id="OB7-6d-uJk"/>
+                        <constraint firstAttribute="bottom" secondItem="Pjd-Kk-PXt" secondAttribute="bottom" constant="53" id="YOt-BH-FtR"/>
+                    </constraints>
                 </view>
             </objects>
             <point key="canvasLocation" x="1018" y="64"/>
@@ -284,8 +295,8 @@
     </scenes>
     <resources>
         <image name="Button" width="904" height="254"/>
-        <image name="Synonyms_Background" width="1242" height="2204"/>
-        <image name="Synonyms_HighscoreStartScreen" width="1242" height="2204"/>
-        <image name="Synonyms_Weiter_Button" width="200" height="200"/>
+        <image name="Synonyms_Background" width="621" height="1102"/>
+        <image name="Synonyms_HighscoreStartScreen" width="621" height="1102"/>
+        <image name="Synonyms_Weiter_Button" width="100" height="100"/>
     </resources>
 </document>
