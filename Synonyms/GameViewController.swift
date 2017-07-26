@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Synonyms
 //
-//  Created by Paul Wiesingeron 24.07.17.
+//  Created by Paul Wiesinger on 24.07.17.
 //  Copyright © 2017 LonosGames. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 
 class GameViewController: UIViewController {
     
-    
+  
     @IBOutlet var endcardView: UIView!
     @IBOutlet weak var nextBTN: UIButton!
     @IBOutlet weak var richtigFlaschImage: UIImageView!
