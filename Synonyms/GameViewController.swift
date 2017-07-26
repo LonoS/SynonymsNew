@@ -23,6 +23,15 @@ class GameViewController: UIViewController {
     @IBOutlet weak var btn4: UIButton!
     //MARK: Score
     @IBOutlet weak var score: UILabel!
+    //MARK: homebutton
+    @IBOutlet weak var homeBTN: UIButton!
+    
+    //MARK: perform home segue
+    
+ 
+    @IBAction func performHome(_ sender: UIButton) {
+        performSegue(withIdentifier: "home", sender: sender)
+    }
     
     
     
@@ -32,6 +41,15 @@ class GameViewController: UIViewController {
         return .lightContent
     }
 
+    
+    // make all buttons unable to be touched
+    func allButtonsEnabledUnenabled(enabled: Bool) {
+        btn1.isEnabled = enabled
+        btn2.isEnabled = enabled
+        btn3.isEnabled = enabled
+        btn4.isEnabled = enabled
+        homeBTN.isEnabled = enabled
+    }
 
     
     
@@ -127,6 +145,8 @@ class GameViewController: UIViewController {
     
     
     func checkIf(_ buttonNummer: Int) {
+        
+        allButtonsEnabledUnenabled(enabled: false)
         view.addSubview(RichtigFalschView)
         RichtigFalschView.center = view.center
         if buttonNummer == antwortButton {
@@ -145,6 +165,8 @@ class GameViewController: UIViewController {
         self.RichtigFalschView.removeFromSuperview()
         
         reloadData()
+        
+        allButtonsEnabledUnenabled(enabled: true)
     }
     
     func getZufallszahl() -> Int{
@@ -206,18 +228,29 @@ class GameViewController: UIViewController {
     
     
         func checkIfHighscore(playedScore: Int){
-            var highscore = Int(readFromFile())
+
             
-            if(playedScore > 0)
-                {
-            writeToFile(text: String(playedScore))
-                }
-            highscore = Int(readFromFile())
-            if(playedScore < highscore!)
-            {
+            let optional: Int? = Int(readFromFile())
+            var highscore: Int
+            
+            if let highscoreunwrapped = optional {
+                highscore = highscoreunwrapped
+            } else {
+                highscore = 0
+            }
+            
+            
+            
+//            let highscore = Int(readFromFile())
+//            
+//
+//            
+            if(playedScore > highscore) {
                 writeToFile(text: String(playedScore))
             }
-        
+
+            
+
         
     }
 

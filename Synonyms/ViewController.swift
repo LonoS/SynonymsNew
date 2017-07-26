@@ -59,6 +59,8 @@ class ViewController: UIViewController {
                 catch {/* error handling here */}
                 
             }
+        
+        
             HighscoreNumber.text = text2
         }
     
