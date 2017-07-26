@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var HighscoreNumber: UILabel!
     @IBOutlet weak var TimesPlayedNumber: UILabel!
     
-    var timesPlayed = 0;
+    var timesPlayed = 0
     @IBAction func startBtn(_ sender: UIButton) {
         performSegue(withIdentifier: "1", sender: sender)
         timesPlayed = timesPlayed + 1
@@ -34,12 +34,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI_Start()
-
-           }
+    }
+    
+    
     func setupUI_Start(){
         getHighscore()
       
-        timesPlayed = (Int(getTimesPlayed()))!
+//        timesPlayed = (Int(getTimesPlayed()))!
       
         TimesPlayedNumber.text = String(timesPlayed)
         
