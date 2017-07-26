@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var HighscoreNumber: UILabel!
     @IBOutlet weak var TimesPlayedNumber: UILabel!
     
-    var timesPlayed = 0
+    
     @IBAction func startBtn(_ sender: UIButton) {
         performSegue(withIdentifier: "1", sender: sender)
             }
@@ -40,14 +40,6 @@ class ViewController: UIViewController {
 //        timesPlayed = (Int(getTimesPlayed()))!
       
         TimesPlayedNumber.text = String(timesPlayed)
-        
-        let path = Bundle.main.path(forResource: "score", ofType: "txt")
-        var content = ""
-        do{
-            content = try String(contentsOfFile: path!)
-        } catch {
-            print(error)
-        }
         
         
          }
