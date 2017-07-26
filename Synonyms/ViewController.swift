@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     
     @IBAction func startBtn(_ sender: UIButton) {
         performSegue(withIdentifier: "1", sender: sender)
-            }
+    }
     
     //changing status bar style to white
     override var preferredStatusBarStyle: UIStatusBarStyle {
