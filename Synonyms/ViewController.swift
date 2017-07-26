@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var TimesPlayedNumber: UILabel!
     
     
+    
+    
     @IBAction func startBtn(_ sender: UIButton) {
         performSegue(withIdentifier: "1", sender: sender)
             }
@@ -31,13 +33,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI_Start()
-
-           }
+    }
+    
+    
     func setupUI_Start(){
         getHighscore()
-        
-        
-         }
+    
+    }
     
     func getHighscore(){
        
