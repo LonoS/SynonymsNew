@@ -81,26 +81,13 @@ class ViewController: UIViewController {
     }
     
     func deleteScore() {
-        let file = "highscore.txt" //this is the file. we will write to and read from it
+        let gvc = GameViewController()
         
-        let text = "0"
-        
-        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            
-            let path = dir.appendingPathComponent(file)
-            
-            //writing
-            do {
-                try text.write(to: path, atomically: false, encoding: String.Encoding.utf8)
-            }
-            catch {/* error handling here */}
-            
-            
-        }
-        
+        gvc.writeToFile(text: "0")
+        gvc.indexArray.removeAll()
         getHighscore()
     }
-    
+
 }
 
 

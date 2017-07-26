@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -31,7 +31,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41k-nT-pSj">
-                                <rect key="frame" x="-4" y="307" width="383" height="53"/>
+                                <rect key="frame" x="0.0" y="376" width="414" height="53"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="35"/>
                                 <size key="titleShadowOffset" width="3" height="2"/>
                                 <state key="normal" title="Start">
@@ -74,27 +74,41 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQw-21-Aez">
-                                <rect key="frame" x="128" y="637" width="119" height="30"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                <size key="titleShadowOffset" width="3" height="1"/>
-                                <state key="normal" title="Reset Highscore">
-                                    <color key="titleColor" red="0.5991629958152771" green="0.5748293399810791" blue="0.5771821141242981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="20" y="594.33333333333337" width="136" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2iT-gv-eLJ"/>
+                                    <constraint firstAttribute="width" constant="136" id="xxF-d0-afz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="reset Score">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="resetScore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0B5-Eo-6ND"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Synonyms" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prI-eK-jLv">
+                                <rect key="frame" x="0.0" y="28" width="414" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="aU6-Mo-BBW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="53"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <size key="shadowOffset" width="3" height="3"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="2" id="0iL-UR-iDa"/>
-                            <constraint firstItem="06U-WZ-Kai" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="Ahx-uQ-yQe"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LQw-21-Aez" secondAttribute="bottom" id="HJI-bu-eSq"/>
+                            <constraint firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0iL-UR-iDa"/>
+                            <constraint firstItem="06U-WZ-Kai" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="19" id="97o-4N-Cmu"/>
+                            <constraint firstItem="LQw-21-Aez" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9xr-Dv-bLR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="06U-WZ-Kai" secondAttribute="bottom" constant="8" id="Gns-lP-DIB"/>
+                            <constraint firstItem="prI-eK-jLv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="I8x-Ic-Abu"/>
                             <constraint firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IN0-GE-Bau"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oYi-VZ-zc7" secondAttribute="bottom" id="KMc-yL-F7D"/>
-                            <constraint firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="M6Z-Jy-Xmt"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="06U-WZ-Kai" secondAttribute="bottom" constant="30" id="Mb9-Lo-4Pi"/>
+                            <constraint firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="M6Z-Jy-Xmt"/>
                             <constraint firstItem="PUh-yP-Fmk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QaX-3c-RGt"/>
                             <constraint firstItem="LQw-21-Aez" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RGa-oj-741"/>
                             <constraint firstItem="PUh-yP-Fmk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Rpr-QM-Uco"/>
@@ -111,7 +125,7 @@
                             <constraint firstAttribute="trailing" secondItem="PUh-yP-Fmk" secondAttribute="trailing" id="l1N-JX-zBk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="41k-nT-pSj" secondAttribute="trailing" constant="-20" id="mSV-kG-LgG"/>
                             <constraint firstAttribute="trailing" secondItem="oYi-VZ-zc7" secondAttribute="trailing" id="t30-Sr-28c"/>
-                            <constraint firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="2" id="u9c-Su-5kD"/>
+                            <constraint firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u9c-Su-5kD"/>
                         </constraints>
                     </view>
                     <connections>
@@ -121,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-282.39999999999998" y="35.532233883058474"/>
+            <point key="canvasLocation" x="-282.60869565217394" y="35.054347826086961"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="kG8-o8-uxt">
