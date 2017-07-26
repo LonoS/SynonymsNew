@@ -200,15 +200,16 @@
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="3" height="3"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvO-MD-doc">
-                                <rect key="frame" x="293" y="20" width="65" height="33"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvO-MD-doc">
+                                <rect key="frame" x="300" y="20" width="59" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="HOME">
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="8"/>
+                                <state key="normal" image="HomeIcon_v1.0">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="cEZ-Bn-fxr"/>
+                                    <action selector="performHome:" destination="O6M-6h-Fea" eventType="touchUpInside" id="P6A-Ht-Zrj"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="home" id="Wfh-cK-SYZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -241,6 +242,7 @@
                         <outlet property="btn4" destination="V8q-Mb-bop" id="DlG-pq-cbW"/>
                         <outlet property="endcardView" destination="Evi-pJ-IzW" id="GCp-Zb-pVx"/>
                         <outlet property="frage" destination="Hto-eg-3Ha" id="7bc-Sb-BSh"/>
+                        <outlet property="homeBTN" destination="JvO-MD-doc" id="kyK-7F-AJh"/>
                         <outlet property="richtigFlaschImage" destination="PLx-Iu-Zyv" id="0aV-KY-AdA"/>
                         <outlet property="score" destination="igf-Cw-N09" id="fox-iV-dy0"/>
                     </connections>
@@ -295,6 +297,7 @@
     </scenes>
     <resources>
         <image name="Button" width="904" height="254"/>
+        <image name="HomeIcon_v1.0" width="50" height="50"/>
         <image name="Synonyms_Background" width="621" height="1102"/>
         <image name="Synonyms_HighscoreStartScreen" width="621" height="1102"/>
         <image name="Synonyms_Weiter_Button" width="100" height="100"/>
