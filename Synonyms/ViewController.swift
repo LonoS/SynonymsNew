@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var TimesPlayedNumber: UILabel!
     
     
+    
+    
     @IBAction func startBtn(_ sender: UIButton) {
         performSegue(withIdentifier: "1", sender: sender)
             }
@@ -36,13 +38,8 @@ class ViewController: UIViewController {
     
     func setupUI_Start(){
         getHighscore()
-      
-//        timesPlayed = (Int(getTimesPlayed()))!
-      
-        TimesPlayedNumber.text = String(timesPlayed)
-        
-        
-         }
+    
+    }
     
     func getHighscore(){
        
