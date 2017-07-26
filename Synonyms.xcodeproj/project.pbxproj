@@ -156,6 +156,11 @@
 					16D5E5011F262B2D00ED7F0F = {
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 					16D5E5151F262B2D00ED7F0F = {
 						CreatedOnToolsVersion = 8.3.3;
