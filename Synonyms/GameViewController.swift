@@ -206,12 +206,17 @@ class GameViewController: UIViewController {
     
     
         func checkIfHighscore(playedScore: Int){
-            let highscore = Int(readFromFile())
+            var highscore = Int(readFromFile())
             
-            if(playedScore > highscore!)
+            if(playedScore > 0)
                 {
             writeToFile(text: String(playedScore))
                 }
+            highscore = Int(readFromFile())
+            if(playedScore < highscore!)
+            {
+                writeToFile(text: String(playedScore))
+            }
         
         
     }

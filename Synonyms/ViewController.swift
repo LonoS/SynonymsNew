@@ -20,10 +20,7 @@ class ViewController: UIViewController {
     var timesPlayed = 0
     @IBAction func startBtn(_ sender: UIButton) {
         performSegue(withIdentifier: "1", sender: sender)
-        timesPlayed = timesPlayed + 1
-        writeTimesPlayed(timesPlayed: timesPlayed)
-        
-    }
+            }
     
     //changing status bar style to white
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -52,13 +49,8 @@ class ViewController: UIViewController {
             print(error)
         }
         
-        let array = content.components(separatedBy: "#")
         
-//        if array[0] != "NOSCORE" && array[1] != "NOTPLAYED"{
-            HighscoreNumber.text = array[0]
-            TimesPlayedNumber.text = array[1]
-//        }
-    }
+         }
     
     func getHighscore(){
        
@@ -81,52 +73,8 @@ class ViewController: UIViewController {
             HighscoreNumber.text = text2
         }
     
-    func writeTimesPlayed(timesPlayed:Int){
-        
-            let file = "timesPlayed.txt" //this is the file. we will write to and read from it
-            
-            
-            
-            if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-                
-                let path = dir.appendingPathComponent(file)
-                let text = String(timesPlayed)
-                //writing
-                do {
-                    try text.write(to: path, atomically: false, encoding: String.Encoding.utf8)
-                }
-                catch {/* error handling here */}
-                
-                
-            }
-        }
-    func getTimesPlayed() -> String{
-        let file = "timesPlayed.txt" //this is the file. we will write to and read from it
-        
-        var text2 = ""
-        
-        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            
-            let path = dir.appendingPathComponent(file)
-            
-            //reading
-            do {
-                text2 = try String(contentsOf: path, encoding: String.Encoding.utf8)
-                
-            }
-            catch {/* error handling here */}
-            
-        }
-        return text2
-    }
-
     
-
-    }
-
-
-
-
+}
 
 
  
