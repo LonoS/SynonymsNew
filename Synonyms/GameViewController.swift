@@ -12,6 +12,7 @@ class GameViewController: UIViewController {
     
     
     @IBOutlet var endcardView: UIView!
+    @IBOutlet weak var nextBTN: UIButton!
     @IBOutlet weak var richtigFlaschImage: UIImageView!
     @IBOutlet var RichtigFalschView: UIView!
     //MARK: Synonym
@@ -26,9 +27,11 @@ class GameViewController: UIViewController {
     //MARK: homebutton
     @IBOutlet weak var homeBTN: UIButton!
     
-    //MARK: perform home segue
+    var richtigeAntwort: Bool!
     
- 
+    
+    
+    //MARK: perform home segue
     @IBAction func performHome(_ sender: UIButton) {
         performSegue(withIdentifier: "home", sender: sender)
     }
@@ -82,6 +85,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        allButtonsEnabledUnenabled(enabled: true)
     }
     
     
@@ -154,19 +158,26 @@ class GameViewController: UIViewController {
             scoreInt = scoreInt + 1
             score.text = "\(scoreInt)"
             checkIfHighscore(playedScore: scoreInt)
+            richtigeAntwort = true
         } else {
+            richtigeAntwort = false
             richtigFlaschImage.image = #imageLiteral(resourceName: "Synonyms_loose_1.0")
-            
+            nextBTN.setImage(#imageLiteral(resourceName: "Synonyms_retry_1.1"), for: .normal)
         }
+
 
     }
     
     @IBAction func nextButton(_ sender: UIButton) {
-        self.RichtigFalschView.removeFromSuperview()
+        if richtigeAntwort {
+            self.RichtigFalschView.removeFromSuperview()
+            reloadData()
+            allButtonsEnabledUnenabled(enabled: true)
+        } else {
+            performSegue(withIdentifier: "home", sender: self)
+        }
+        richtigeAntwort = false
         
-        reloadData()
-        
-        allButtonsEnabledUnenabled(enabled: true)
     }
     
     func getZufallszahl() -> Int{
@@ -239,12 +250,7 @@ class GameViewController: UIViewController {
                 highscore = 0
             }
             
-            
-            
-//            let highscore = Int(readFromFile())
-//            
-//
-//            
+
             if(playedScore > highscore) {
                 writeToFile(text: String(playedScore))
             }

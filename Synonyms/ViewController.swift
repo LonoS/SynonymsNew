@@ -64,6 +64,42 @@ class ViewController: UIViewController {
             HighscoreNumber.text = text2
         }
     
+    @IBAction func resetScore(_ sender: UIButton) {
+        let alert = UIAlertController.init(title: "Reset!", message: "Do you really want to reset your score?", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction.init(title: "Yes", style: .destructive, handler: { (action) in
+            
+            self.deleteScore()
+            alert.dismiss(animated: true, completion: nil)
+            
+        }))
+        
+        alert.addAction(UIAlertAction.init(title: "No", style: .default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func deleteScore() {
+        let file = "highscore.txt" //this is the file. we will write to and read from it
+        
+        let text = "0"
+        
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            
+            let path = dir.appendingPathComponent(file)
+            
+            //writing
+            do {
+                try text.write(to: path, atomically: false, encoding: String.Encoding.utf8)
+            }
+            catch {/* error handling here */}
+            
+            
+        }
+        
+        getHighscore()
+    }
     
 }
 

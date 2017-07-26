@@ -105,6 +105,17 @@
                                     <constraint firstItem="PSt-7C-JKN" firstAttribute="leading" secondItem="06U-WZ-Kai" secondAttribute="leading" id="vwQ-kS-Iiw"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQw-21-Aez">
+                                <rect key="frame" x="16" y="543" width="136" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="reset Score">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetScore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0B5-Eo-6ND"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -137,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-282" y="36"/>
+            <point key="canvasLocation" x="-282.39999999999998" y="35.532233883058474"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="kG8-o8-uxt">
@@ -254,6 +265,7 @@
                         <outlet property="endcardView" destination="Evi-pJ-IzW" id="GCp-Zb-pVx"/>
                         <outlet property="frage" destination="Hto-eg-3Ha" id="7bc-Sb-BSh"/>
                         <outlet property="homeBTN" destination="JvO-MD-doc" id="kyK-7F-AJh"/>
+                        <outlet property="nextBTN" destination="2kQ-XN-7PF" id="f5K-Ka-yDJ"/>
                         <outlet property="richtigFlaschImage" destination="PLx-Iu-Zyv" id="0aV-KY-AdA"/>
                         <outlet property="score" destination="igf-Cw-N09" id="fox-iV-dy0"/>
                     </connections>
